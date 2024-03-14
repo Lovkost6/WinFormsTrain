@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsTrain.Controllers;
 
 namespace WinFormsTrain
 {
@@ -21,7 +22,7 @@ namespace WinFormsTrain
 
         private void button1_Click(object sender, EventArgs e)
         {
-            context.listBox1.Items.Add($"{textBox1.Text} + {textBox2.Text} + {textBox3.Text}");
+            Employees.CreateEmployee(textBox2.Text,textBox1.Text,textBox3.Text,textBox4.Text, Int32.Parse(textBox4.Text));
             Close();
         }
     }
